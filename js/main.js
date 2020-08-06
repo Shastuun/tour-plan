@@ -77,4 +77,5 @@ $(document).ready(function () {
       phone: "Номер телефона обязателен",
     },
   });
+  AOS.init();
 });
