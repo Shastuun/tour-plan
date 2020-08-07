@@ -23,12 +23,12 @@
     justify-content: space-between
     max-width: 731px
     margin: auto
-  &__title
+  &-title
     color: $light
     font-weight: 400
     font-size: 24px
     line-height: 30px
-    &--strong
+    &__strong
       display: block
       font-weight: 600
       font-size: 36px
@@ -41,7 +41,7 @@
   height: 55px
 
   &__input
-    position: absolute
+    right: 0
     width: 100%
     height: 100%
     padding-left: 33px
@@ -55,9 +55,11 @@
     position: absolute
     top: 0
     right: 0
+    bottom: 25%
     height: 100%
     border: none
     background-color: #EC1F46
     color: $light
     min-width: 65px
     border-radius: 0 4px 4px 0
+    z-index: 99

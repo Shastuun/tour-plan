@@ -52,14 +52,17 @@ $(document).ready(function () {
     errorClass: "invalid",
     messages: {
       name: {
-        required: "Укажите имя",
-        minlength: "Имя должно быть не короче 2 букв",
+        required: "Enter your name",
+        minlength: "Name shouldn't be shorter than 2 letters",
       },
       email: {
-        required: "Укажите адрес электронной почты",
-        email: "Адрес электронной почты должен быть в формате name@domain.com",
+        required: "Enter your email adress",
+        email: "Email adress should be in the format of name@domain.com",
       },
-      phone: "Номер телефона обязателен",
+      phone: {
+        required: "Enter your phone number",
+        minlength: "Phone number shouldn't be shorter than 2 letters",
+      },
     },
   });
   //обработка форм
@@ -67,15 +70,36 @@ $(document).ready(function () {
     errorClass: "invalid",
     messages: {
       name: {
-        required: "Укажите имя",
-        minlength: "Имя должно быть не короче 2 букв",
+        required: "Enter your name",
+        minlength: "Name shouldn't be shorter than 2 letters",
       },
       email: {
-        required: "Укажите адрес электронной почты",
-        email: "Адрес электронной почты должен быть в формате name@domain.com",
+        required: "Enter your email adress",
+        email: "Email adress should be in the format of name@domain.com",
       },
-      phone: "Номер телефона обязателен",
+      phone: {
+        required: "Enter your phone number",
+        minlength: "Phone number shouldn't be shorter than 10 letters",
+      },
     },
   });
+  $(".subscribe__form ").validate({
+    errorClass: "invalid",
+    messages: {
+      name: {
+        required: "Enter your name",
+        minlength: "Name shouldn't be shorter than 2 letters",
+      },
+      email: {
+        required: "Enter your email adress",
+        email: "Email adress should be in the format of name@domain.com",
+      },
+      phone: {
+        required: "Enter your phone number",
+        minlength: "Phone number shouldn't be shorter than 10 letters",
+      },
+    },
+  });
+
   AOS.init();
 });

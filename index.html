@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Best Tour Plan - Hotel Booking</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
     <link
       href="https://fonts.googleapis.com/css2?family=Muli:wght@400;700&family=Nunito:wght@400;700;800&display=swap"
       rel="stylesheet"
@@ -258,17 +260,22 @@
     <!-- /.hotel -->
     <section class="newsletter">
       <div class="newsletter-wrapper" data-aos="fade-up">
-        <h2 class="newsletter__title">
+        <h2 class="newsletter-title">
           subscribe to our
-          <span class="newsletter__title--strong">Newsletter</span>
+          <span class="newsletter-title__strong">Newsletter</span>
         </h2>
-        <form action="#" class="subscribe newsletter__subsrcibe">
+        <form
+          action="#"
+          class="subscribe newsletter__subsrcibe subscribe__form"
+        >
           <input
-            type="text"
-            class="subscribe__input"
+            type="email"
+            class="input subscribe__input"
             placeholder="Your email adress"
+            name="email"
+            required
           />
-          <button class="subscribe__button">
+          <button class="subscribe__button button">
             Send
           </button>
         </form>
@@ -486,7 +493,7 @@
               class="card__image"
             />
             <h3 class="card__title">The curious corner of chamarel</h3>
-            <button class="card__button">Book Now</button>
+            <button class="card__button" data-toggle="modal">Book Now</button>
           </div>
           <!-- /.card -->
           <div
@@ -500,7 +507,7 @@
               class="card__image"
             />
             <h3 class="card__title">Gymkhana club golf course</h3>
-            <button class="card__button">Book Now</button>
+            <button class="card__button" data-toggle="modal">Book Now</button>
           </div>
           <!-- /.card -->
           <div
@@ -514,7 +521,7 @@
               class="card__image"
             />
             <h3 class="card__title">Tamarind falls hiking trip - full day</h3>
-            <button class="card__button">Book Now</button>
+            <button class="card__button" data-toggle="modal">Book Now</button>
           </div>
           <!-- /.card -->
           <div
@@ -528,7 +535,7 @@
               class="card__image"
             />
             <h3 class="card__title">The blue marine discovery quest</h3>
-            <button class="card__button">Book Now</button>
+            <button class="card__button" data-toggle="modal">Book Now</button>
           </div>
           <!-- /.card -->
         </div>
@@ -661,10 +668,17 @@
                     class="footer__icon"
                   />
                 </div>
-                Tel (business hours) : 269 1500 <br />
-                Tel (hotline) Monday - Saturday: 52-56-61-38 (08:00 am – 20:00
-                pm) <br />
-                Tel (hotline) Sunday: 52-56-61-38 (08:00 am – 14:00 pm)
+                <span>
+                  Tel (business hours) :
+                  <a href="tel:2691500" class="footer__link">269 1500</a>
+                  <br />
+                  Tel (hotline) Monday - Saturday:
+                  <a href="tel:52566138" class="footer__link">52-56-61-38</a>
+                  (08:00 am – 20:00 pm) <br />
+                  Tel (hotline) Sunday:
+                  <a href="tel:52566138" class="footer__link">52-56-61-38</a>
+                  (08:00 am – 14:00 pm)
+                </span>
               </li>
               <li class="footer__item footer__item--mb-2">
                 <div class="footer__icon-wrapper">
@@ -674,7 +688,13 @@
                     class="footer__icon"
                   />
                 </div>
-                cherly.lawson@example.com
+                <span
+                  ><a
+                    href="mailto:cherly.lawson@example.com"
+                    class="footer__link"
+                    >cherly.lawson@example.com</a
+                  ></span
+                >
               </li>
             </ul>
           </div>
@@ -689,15 +709,17 @@
                   placeholder="Your Full Name*"
                   name="name"
                   required
+                  minlength="2"
                 />
               </div>
               <div class="footer__input-group">
                 <input
-                  type="text"
+                  type="tel"
                   class="input footer__input"
                   placeholder="Phone Number*"
                   name="phone"
                   required
+                  minlength="10"
                 />
               </div>
               <textarea
@@ -740,6 +762,7 @@
             placeholder="Phone Number*"
             name="phone"
             required
+            minlength="10"
           />
           <input
             type="email"
